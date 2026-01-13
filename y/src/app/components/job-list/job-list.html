@@ -1,0 +1,25 @@
+<p>it works</p>
+<div class="container">
+    <div class="table">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Title</th>
+                    <th>description</th>
+                    <th>status</th>
+                </tr>
+            </thead>
+            <tbody>
+               @for (item of tasksList; track $index) {
+                <tr>
+                    <td>{{item.id}}</td>
+                    <td>{{item.title}}</td>
+                    <td>{{item.description}}</td>
+                    <td>{{item.status}}</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

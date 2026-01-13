@@ -1,0 +1,16 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Buy groceries",
+      "description": "Milk, Eggs, Bread",
+      "status": "Pending"
+    },
+    {
+      "id": 2,
+      "title": "Read Angular docs",
+      "description": "Practice services and components",
+      "status": "Done"
+    }
+  ]
+}
