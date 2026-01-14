@@ -1,6 +1,27 @@
-<p>it works</p>
-<div class="container">
-    <div class="table">
+
+<div class="container-fluid w-100">
+    <div class="row">
+        <div class="col-4 m-4">
+            <div class="card p-4">
+                <form action="">
+                <div class="mt-4">
+                    <label for="" class="form-label">Task Title</label>
+                    <input type="text" [(ngModel)]="task.title" name="title" class="form-control" placeholder="Enter Title">
+                </div>
+                <div class="mt-4">
+                    <label for="" class="form-label">Description</label>
+                    <input type="text" [(ngModel)]="task.description" name="description" class="form-control" placeholder="Enter Description">
+                </div>
+                <div class="mt-4">
+                    <button class="btn btn-success" (click)="saveTask(task)">{{task.id===""?'Save':'Update'}}</button>
+                </div>
+            </form>
+
+            </div>
+            
+        </div>
+        <div class="col-8">
+            <div class="table">
         <table class="table">
             <thead>
                 <tr>
@@ -8,6 +29,7 @@
                     <th>Title</th>
                     <th>description</th>
                     <th>status</th>
+                    <th>action</th>
                 </tr>
             </thead>
             <tbody>
@@ -16,10 +38,20 @@
                     <td>{{item.id}}</td>
                     <td>{{item.title}}</td>
                     <td>{{item.description}}</td>
-                    <td>{{item.status}}</td>
+                    <td>{{item.status? "done":"pending"}}</td>
+                    <td>
+                        <button class="btn btn-secondary m-1" [disabled]="item.status" (click)="complete(item)">complete</button>
+                        <button class="btn btn-primary m-1" (click)="edit(item)">edit</button>
+                        <button class="btn btn-danger m-1" (click)="delete(item.id)">delete</button>
+                    </td>
                 </tr>
             }
             </tbody>
         </table>
     </div>
+
+        </div>
+        
+    </div>
+    
 </div>

@@ -1,8 +1,8 @@
 export class Task {
-  id!: number;
+  id!: string;
   title!: string;
   description!: string;
-  status!: string;
+  status!: boolean;
 
   constructor(data?: Partial<Task>) {
     Object.assign(this, data);

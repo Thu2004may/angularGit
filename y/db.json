@@ -1,16 +1,22 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "title": "Buy groceries",
-      "description": "Milk, Eggs, Bread",
-      "status": "Pending"
-    },
-    {
-      "id": 2,
+      "id": "2",
       "title": "Read Angular docs",
       "description": "Practice services and components",
-      "status": "Done"
+      "status": true
+    },
+    {
+      "id": "3",
+      "title": "coding",
+      "description": "make software product",
+      "status": true
+    },
+    {
+      "id": "4",
+      "title": "study",
+      "description": "japan kanji study",
+      "status": true
     }
   ]
 }

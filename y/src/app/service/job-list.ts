@@ -8,10 +8,15 @@ export class JobList {
   apiURL: string = "http://localhost:3000/tasks"
   constructor(private http: HttpClient){}
   taskList: any[] = [];
+  
 
   getAllTasks(){
     this.http.get<any[]>(this.apiURL).subscribe(res => this.taskList = res);
     return this.http.get<any[]>(this.apiURL)
+  }
+
+  saveTask(obj:any){
+    return this.http.post(this.apiURL,obj)
   }
   
 }
